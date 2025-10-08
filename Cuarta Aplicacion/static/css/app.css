@@ -1,0 +1,14 @@
+body{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    min-height: 120px;
+    justify-content: center;
+}
+
+main {
+  min-height: 400px;
+
+}

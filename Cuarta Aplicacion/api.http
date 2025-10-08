@@ -1,0 +1,15 @@
+#obtener todos los libros
+GET http://127.0.0.1:3000/api/libros
+
+###obtener libro por id
+@idLibro=68a7ae6bc8738479c15a2c96
+GET http://127.0.0.1:3000/api/libros/{{idLibro}}
+
+###add new libro
+POST http://127.0.0.1:3000/api/libros
+Content-Type: application/json
+
+{
+    "titulo": "Cien Años de Soledad",
+    "autor": "Gsbriel Gacía Márquez"
+}
