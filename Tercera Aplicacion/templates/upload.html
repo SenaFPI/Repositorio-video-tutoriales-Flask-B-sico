@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <title>Curso Desarrollo Web en Python con Flask</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-2">
+                    <img src="{{ url_for('static', filename='imagenes/logoSena.png') }}" alt="" width="100">
+                </div>
+                <div class="col-10">
+                    <h2 class="text-center fw-bold">CURSO DESARROLLO WEB EN PYTHON CON FLASK</h2>
+                </div>
+            </div>
+        </header>
+        <main style="margin:auto">
+            <h3 class="text-center fw-bold">Cargar archivos</h3>
+            <form method="post" enctype="multipart/form-data" action="/upload" class="w-100">
+                <div class="row mt-3">
+                    <div class="col-9">                
+                        <input type="file" name="archivo" placeholder="Seleccione Archivo" 
+                            class="form-control" accept="*.*" required>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary">Cargar</button>
+                    </div>
+                </div>                   
+                <a href="{{ url_for('logout') }}" class="mt-2 text-center">Cerrar sesión</a>
+            </form>
+
+            <div class="mt-5 text-center fw-bold">
+                    {% if mensaje %}      
+                        {{ mensaje }}
+                    {%endif%}
+            </div>
+        </main>
+        <footer class="mt-5">
+            <div class="text-center">
+                Ejercicio Curso Desarrollo Web en Ptyhon con Flask
+            </div>
+        </footer>
+
+    </div>
+        
+    
+</body>
+</html>

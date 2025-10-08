@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <title>Curso Desarrollo Web en Python con Flask</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-2">
+                    <img src="{{ url_for('static', filename='imagenes/logoSena.png') }}" alt="" width="100">
+                </div>
+                <div class="col-10">
+                    <h2 class="text-center fw-bold">CURSO DESARROLLO WEB EN PYTHON CON FLASK</h2>
+                </div>
+            </div>
+        </header>
+        <main class="mt-2">
+            <h3 class="text-center fw-bold">Archivos cargado exitosamente</h3>
+            <ul class="mt-2">
+            {% for archivo in archivos%}
+                <li>{{ archivo }}</li>
+            {% endfor %}
+            </ul>
+            <a href="{{ url_for('upload') }}" class="mt-2">Subir otro archivo</a>
+        </main>
+        
+        <footer class="mt-5">
+            <div class="text-center">
+                Ejercicio Curso Desarrollo Web en Ptyhon con Flask
+            </div>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>
