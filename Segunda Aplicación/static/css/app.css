@@ -1,0 +1,21 @@
+body{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    min-height: 120px;
+    justify-content: center;
+}
+tr{
+    background-color: darkseagreen !important;
+}
+
+.main {
+  min-height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
